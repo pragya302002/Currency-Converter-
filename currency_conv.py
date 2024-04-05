@@ -17,7 +17,7 @@ class Currency_converter(QtWidgets.QMainWindow):
         self.close_pushButton.clicked.connect(exit)
         self.convert_pushButton.clicked.connect(self.convert_currency)
 
-        response = requests.get('http://data.fixer.io/api/latest?access_key=6a6cf093aca8fdaac95c7708f74efbbc')
+        response = requests.get('url')
         data = response.json()  # converted the data in json format first n then into dictionary
         # print(data)
         currencies = dict(data['rates']) 
