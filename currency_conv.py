@@ -10,7 +10,7 @@ class Currency_converter(QtWidgets.QMainWindow):
         super(Currency_converter, self).__init__()
         uic.loadUi("currency_conv.ui", self)
         self.show()
-        # self.data = requests.get('http://data.fixer.io/api/latest?access_key=6a6cf093aca8fdaac95c7708f74efbbc')
+        # self.data = requests.get('url')
         # self.currencies = self.data['rates']
         self.clear_pushButton.clicked.connect(self.enter_amount_lineEdit.clear)
         self.clear_pushButton.clicked.connect(self.output_lineEdit.clear)
