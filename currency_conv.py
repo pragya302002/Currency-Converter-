@@ -20,13 +20,13 @@ class Currency_converter(QtWidgets.QMainWindow):
         response = requests.get('http://data.fixer.io/api/latest?access_key=6a6cf093aca8fdaac95c7708f74efbbc')
         data = response.json()  # converted the data in json format first n then into dictionary
         # print(data)
-        currencies = dict(data['rates'])  # data dict se rate 'values' use kri for currencies
+        currencies = dict(data['rates']) 
 
         for values in data:
             self.from_comboBox.addItems(currencies.keys())
             self.to_comboBox.addItems(currencies.keys())
 
-    #     response = requests.get('http://data.fixer.io/api/latest?access_key=6a6cf093aca8fdaac95c7708f74efbbc')
+    #     response = requests.get('url')
     #     currency = response.json()
 
     def convert_currency(self):
@@ -36,12 +36,6 @@ class Currency_converter(QtWidgets.QMainWindow):
         print(converted_amount)
         self.output_lineEdit.setText(str(converted_amount))
 
-    # url = 'http://data.fixer.io/api/latest?access_key=6a6cf093aca8fdaac95c7708f74efbbc'
-    # print(response.status_code)    # o/p 200 shows api working ache se
-    # print(response.json())
-    # data = response.json()
-    # print(data)
-    # currencies = dict(data['rates'])
 
 
 if __name__ == "__main__":
